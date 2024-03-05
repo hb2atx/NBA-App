@@ -1,0 +1,13 @@
+.h1-title {
+    margin-top: 5rem;
+    text-align: center;
+    color: #FB8122;
+}
+
+.button-container {
+    text-align: center;
+  }
+  
+  .button-container button {
+    margin-right: 1rem;
+  }

@@ -1,0 +1,76 @@
+20240218	14:38:40	d252412f-977d-436e-a26d-040d43109a12	Error: Not allowed by CORS	OPTIONS	/register	http://localhost:3001
+20240218	20:57:32	a13ae576-7711-4a50-b846-ea802d54e142	TypeError: allowedOrigins.indexOf is not a function	OPTIONS	/register	http://localhost:3001
+20240218	20:58:47	ba7b6d11-2d9b-48ec-b612-22ab24624514	Error: Not allowed by CORS	OPTIONS	/register	http://localhost:3001
+20240218	22:49:52	d026040e-94f6-4bc7-a1fc-a3af964925de	ReferenceError: EMAIL_REGEX is not defined	POST	/auth/register	http://localhost:3001
+20240218	22:51:28	38f44767-2690-4606-b233-f5118bc70f2c	ReferenceError: EMAIL_REGEX is not defined	POST	/auth/register	http://localhost:3001
+20240219	06:22:14	de62d8a2-85e7-468a-8409-1439d2489610	TypeError: db.get is not a function	GET	/avg	undefined
+20240219	12:09:15	46615801-3143-4cb4-b2cb-1e6cb9500a36	Error: Not allowed by CORS	OPTIONS	/auth	http://localhost:3000
+20240219	16:54:23	df3af793-3049-4d6b-b938-dccb86ca1cae	ReferenceError: decodeURIComponents is not defined	GET	/player/stats	undefined
+20240219	16:54:34	c5b40f90-6403-4e04-97e5-6a0c1209de0f	ReferenceError: decodeURIComponents is not defined	GET	/player/Jaylen%20Brown	undefined
+20240228	16:21:48	48d82bf8-f26a-4913-8302-14000888ac8b	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/auth	undefined
+20240228	16:21:52	0b34a877-ea9e-4327-b44f-ed00486b5e4e	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/auth/register	undefined
+20240228	16:21:52	413d20ec-1495-4233-a1c8-07ab3e988a3e	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/favicon.ico	undefined
+20240228	16:22:41	095c7c21-a5a5-4534-9eca-3b58108c9ea8	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/auth	undefined
+20240229	03:53:07	7f4aeef3-5052-4801-aaca-e42d03e80bfb	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/J	http://localhost:3001
+20240229	03:53:07	87b66a03-06ad-4508-97c2-87c8af6c509d	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Ja	http://localhost:3001
+20240229	03:53:08	41ea9add-660b-415c-b1fb-fd5e509988d7	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jay	http://localhost:3001
+20240229	03:53:08	90715d4a-995a-4824-ab86-5d10b2bd7e72	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jayl	http://localhost:3001
+20240229	03:53:08	09fbc24b-e34e-4e97-b621-12abd75a3d1b	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jayle	http://localhost:3001
+20240229	03:53:09	e272d64a-7b14-4cd9-9800-01c748a16afd	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jaylen	http://localhost:3001
+20240229	03:53:09	792a852e-4f47-475b-9cd1-c15e173c792f	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jaylen%20	http://localhost:3001
+20240229	03:53:09	7442b767-ea62-4325-bd78-9cecc9902a5f	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jaylen%20B	http://localhost:3001
+20240229	03:53:10	68add840-4e8e-405e-bd2a-c8297fe3aece	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jaylen%20Br	http://localhost:3001
+20240229	03:53:10	1f89ca8e-ce8b-4365-bacc-7b8ac85a98e2	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jaylen%20Bro	http://localhost:3001
+20240229	03:53:11	3349c71f-3720-43ed-bab0-f7741fa45062	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jaylen%20Brow	http://localhost:3001
+20240229	03:53:11	a1966d53-21b0-4994-a8b8-af7fae7f5cd8	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jaylen%20Brown	http://localhost:3001
+20240229	03:53:13	c6213114-a4cb-4227-a63a-2a306fbbf984	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/players/Jaylen%20Brown	http://localhost:3001
+20240229	03:54:22	38a5d6fe-16dc-484b-b4b3-e188eac0ef80	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	03:54:26	076dd31c-f7d3-44f8-9e44-fa44ef276ea2	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	03:54:31	4ce4de05-151e-4ebb-962c-717874b2a53a	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	08:44:32	e4d39af4-4ef3-4da5-86a0-c9cb8d5b4dbe	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/J	http://localhost:3001
+20240229	08:44:32	ba00510c-efd2-4cd2-ba02-478be49ea5dc	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Ja	http://localhost:3001
+20240229	08:44:33	27296b1b-3740-411b-babe-5c80f9be7560	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jay	http://localhost:3001
+20240229	08:44:33	0f81b3b8-545c-4d3e-87c4-0ebb18d76840	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jayl	http://localhost:3001
+20240229	08:44:33	7b1531ce-2525-49f3-8a08-5c87ce5e44fd	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jayle	http://localhost:3001
+20240229	08:44:34	9929efb4-7f02-4b4d-abdd-60aa428ec03f	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen	http://localhost:3001
+20240229	08:44:34	d2123ef6-376f-44ce-a1c0-7478c8865ff4	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20	http://localhost:3001
+20240229	08:44:34	591ca18d-d85f-4fcf-8451-dabb43b87fe9	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20B	http://localhost:3001
+20240229	08:44:35	0e4e615f-9914-45aa-94ee-6a714032ba8a	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Br	http://localhost:3001
+20240229	08:44:35	dadb230b-794b-4576-83b8-27caefd6c325	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Bro	http://localhost:3001
+20240229	08:44:36	73e2eb51-cf3b-4b1c-adbf-43a070e8aefc	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brow	http://localhost:3001
+20240229	08:44:36	e16b3bf0-4d79-4179-b1ca-9d7b1c4168e0	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	08:44:39	207f5f4b-e9a5-4e8c-bca7-a87a4bea77c5	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	08:48:20	901442f7-1386-44d3-b45f-6fb1568ab66c	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/J	http://localhost:3001
+20240229	08:48:21	40e5600a-9281-485e-afa5-5ace05d9c090	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Ja	http://localhost:3001
+20240229	08:48:21	26c3091e-ee4f-4475-9b92-4879d937ef0f	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jay	http://localhost:3001
+20240229	08:48:22	e3ea23df-4673-4776-948d-d471d29685cf	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jayl	http://localhost:3001
+20240229	08:48:22	185e7a18-ee47-4d97-86fb-2d54272c219a	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jayle	http://localhost:3001
+20240229	08:48:22	c994f9c1-09b6-4dc7-a147-c021ae45d557	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen	http://localhost:3001
+20240229	08:48:23	f079ef63-8cf7-41a8-95e5-d61ac8ce1d21	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20	http://localhost:3001
+20240229	08:48:23	0df91204-3784-4020-b5ec-4566a0c5f482	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20B	http://localhost:3001
+20240229	08:48:24	6737b26a-75f8-4f80-a9f4-85ff0dad33ad	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Br	http://localhost:3001
+20240229	08:48:24	c095c319-4c60-43b7-ab5f-954a570b2f74	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Bro	http://localhost:3001
+20240229	08:48:24	1c2a1550-6453-4ed4-b347-a5148ed58b86	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brow	http://localhost:3001
+20240229	08:48:24	c25b2788-daf4-40e3-b694-1e142a8d2c0b	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	08:48:27	f6c8cd0f-cec1-4bf0-a7ac-165923209127	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	08:53:52	b4e5fa88-b236-4d90-ae7a-87ff379ecdaf	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	08:53:56	4a8929c1-dab0-4e03-a529-1e174bc80444	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	08:54:47	658342fe-d095-43bb-8ce2-6be6dc45ebd6	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/playerJaylen%20Brown	http://localhost:3001
+20240229	09:25:44	7a9488e2-fb5f-4832-a4ff-e3baa91e0053	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/J	http://localhost:3001
+20240229	09:25:44	7267eae4-af68-4cbc-84b2-1f59eb49efb5	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Ja	http://localhost:3001
+20240229	09:25:45	00edc0cd-57cb-4645-88f8-27953035540c	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jay	http://localhost:3001
+20240229	09:25:45	86904adf-a4f7-4bfc-9b50-792afae432e0	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jayl	http://localhost:3001
+20240229	09:25:45	424b38ba-de60-4e6e-a8b6-a937a19391e6	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jayle	http://localhost:3001
+20240229	09:25:46	9a4f0dcc-e277-42b5-bd96-90e5fd67d08a	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen	http://localhost:3001
+20240229	09:25:46	c2f2bee5-06eb-448b-a900-26257429e34e	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20	http://localhost:3001
+20240229	09:25:46	d863d532-7a14-4727-a2d0-67bdd2efa1de	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20B	http://localhost:3001
+20240229	09:25:47	f9dc7934-3a9b-4dd0-8fee-d6e8f5b00dea	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Br	http://localhost:3001
+20240229	09:25:47	5ad1dc21-a8ea-40c1-9a84-0bb29512ea32	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Bro	http://localhost:3001
+20240229	09:25:47	373c1495-5afa-437b-a9a2-be21397a5486	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brow	http://localhost:3001
+20240229	09:25:48	3b93267c-5cc8-4aaf-a04b-d2bacd66625d	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	09:25:49	0efcff8b-9281-442e-a2f4-77753bdfe0b9	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240229	09:25:50	efd6ab17-5a96-43e3-b8e2-f95806c8321c	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/player/stats/Jaylen%20Brown	http://localhost:3001
+20240304	19:05:49	e43af6b8-36a1-4021-870e-1cc6abdcc788	Too Many Requests: Too many login attempts from this IP, please try again after a 60 second pause	POST	/	http://localhost:3001
+20240305	13:39:15	b289eba0-c5c1-4ca3-af5f-16d192df3e90	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/avgStats/PG	http://localhost:3001
+20240305	13:39:22	1bf07384-f22b-4228-aa5f-d3e881dbe473	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/avgStats/SG	http://localhost:3001
+20240305	13:39:31	6d92cc38-7b76-403e-aba1-ef29f59d8bce	Error: ENOENT: no such file or directory, stat '/home/hb2atx/NBA-App/backend/views/404.html'	GET	/avgStats/PF	http://localhost:3001
