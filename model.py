@@ -87,5 +87,13 @@ class Favorites(db.Model):
     # Define relationships
     user = db.relationship('User', backref=db.backref('favorites', lazy=True))
     player = db.relationship('PlayerStats', backref=db.backref('favorites', lazy=True))
+
    
+class User(db.Model):
+    __tablename__ = "user"
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    password = db.Column(db.String(255), nullable=False)
   
