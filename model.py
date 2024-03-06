@@ -75,6 +75,17 @@ class AvgStats(db.Model):
     avg_avg_blocks_per_game = db.Column(db.Float)
     avg_turnovers_per_game = db.Column(db.Float)
     avg_points_per_game = db.Column(db.Float)
-    
+
+class Favorites(db.Model):
+
+    __tablename__ = "favorites"
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    player_id = db.Column(db.Integer, db.ForeignKey('players_stats.id'), nullable=False)
+
+    # Define relationships
+    user = db.relationship('User', backref=db.backref('favorites', lazy=True))
+    player = db.relationship('PlayerStats', backref=db.backref('favorites', lazy=True))
    
   
