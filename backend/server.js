@@ -12,7 +12,7 @@ const cors = require('cors')
 const corsOptions = require('./config/corsOptions')
 const db = require('./db');
 app.use(cors(corsOptions))
-
+const PORT = process.env.PORT || 3500
 
 // middleware
 app.use(logger)
@@ -29,3 +29,4 @@ app.use('/avg', require('./routes/avgRoutes'))
 app.use(errorHandler)
 
 
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
