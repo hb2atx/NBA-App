@@ -7,7 +7,6 @@ import "./Stats.css";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// Function to compare specific stats and return the result
 function compareStats(playerStat, avgStat) {
   if (playerStat > avgStat) {
     return 'Above Average';
@@ -18,7 +17,6 @@ function compareStats(playerStat, avgStat) {
   }
 }
 
-// Function to determine performance result
 function performanceResult(playerStat, avgStat) {
   if (playerStat > avgStat) {
     return 'Player has Overperformed';
@@ -29,18 +27,15 @@ function performanceResult(playerStat, avgStat) {
   }
 }
 
-
 function Stats() {
-  // State for getting player stats
   const [playerName, setPlayerName] = useState('');
   const [playerStats, setPlayerStats] = useState({});
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const [isFavorites, setIsFavorites] = useState('');
 
-  // State for getting avg stats by position
-  // new state for position and avgstats
   const [avgStats, setAvgStats] = useState({})
   const [selectedPosition, setSelectedPosition] = useState('');
 
@@ -48,15 +43,13 @@ function Stats() {
     setPlayerName(e.target.value);
   };
 
-  // get playerStats by playerName from backend api
   const handleSearch = async () => {
     setLoading(true);
     try {
       const encodedPlayerName = encodeURIComponent(playerName);
       const response = await axios.get(`http://localhost:3500/player/${encodedPlayerName}`);
-      
+
       console.log('Response Data:', response.data); 
-// define useState for playerStats
       setPlayerStats(response.data);
       setLoading(false);
     } catch (error) {
@@ -66,15 +59,13 @@ function Stats() {
     }
   };
 
-  // adding favorite players to /favorites page
   const handleAddToFavorites = () => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    favorites.push(playerStats.player); // Fix typo 'playerStatstats' to 'playerStats'
+    favorites.push(playerStats.player);
     localStorage.setItem('favorites', JSON.stringify(favorites));
     setIsFavorites(true);
   };
 
-  // Get AvgStats from backend localhost:3500/avg/:position
   const handlePositionChange = async (e) => {
     const position = e.target.value;
     setSelectedPosition(position);
@@ -97,7 +88,7 @@ function Stats() {
             Player Stats
           </h1>
           <div>
-            {/* Player Stats Input Section */}
+          
             <label htmlFor="playerName">Enter Player Name:</label>
             <input
               type="text"
@@ -129,21 +120,24 @@ function Stats() {
                 <li>Salary: {playerStats.salary}</li>
                 <li>PPG: {playerStats.player.points_per_game}</li>
                 <li>MPG: {playerStats.player.minutes_per_game}</li>
+                <li>FGA: {playerStats.player.field_goal_attempts_per_game}</li>
                 <li>FG%: {playerStats.player.field_goal_percentage}</li>
                 <li>3PT%: {playerStats.player.minutes_per_game}</li>
                 <li>FT%: {playerStats.player.free_throw_percentage}</li>
-                <li>REB: {playerStats.player.total_rebounds_per_game}</li>
+                <li>OR: {playerStats.player.offensive_rebounds_per_game}</li>
+                <li>DR: {playerStats.player.defensive_rebounds_per_game}</li>
+                <li>TOTR: {playerStats.player.total_rebounds_per_game}</li>
                 <li>AST: {playerStats.player.assists_per_game}</li>
                 <li>STL: {playerStats.player.steals_per_game}</li>
                 <li>BLK: {playerStats.player.blocks_per_game}</li>
-                <li>REB: {playerStats.player.total_rebounds_per_game}</li>
+                <li>TO: {playerStats.player.turnovers_per_game}</li>
               </ul>
             </div>
           )}
         </Col>
       </Row>
 
-        {/* Average Stats Display Section */}
+      
     <Row>
       <Col style={{ marginLeft: '5px' }}>
         <div>
@@ -158,49 +152,47 @@ function Stats() {
           </select>
         </div>
 
-        {/* Comparison Section */}
         {selectedPosition && Object.keys(avgStats).length > 0 && (
-          <div>
-            <h2 className="h2">Comparison</h2>
-            <ul className="ul">
-              
-              <li>PPG Comparison: {compareStats(playerStats.player.points_per_game, avgStats.avg_points_per_game)}</li>
-              <li>MPG Comparison: {compareStats(playerStats.player.minutes_per_game, avgStats.avg_minutes_per_game)}</li>
-              <li>FG% Comparison: {compareStats(playerStats.player.field_goal_percentage, avgStats.avg_field_goal_percentage)}</li>
-              <li>3PT% Comparison: {compareStats(playerStats.player.three_point_percentage, avgStats.avg_three_point_percentage)}</li>
-              <li>REB Comparison: {compareStats(playerStats.player.total_rebounds_per_game, avgStats.avg_total_rebounds_per_game)}</li>
-              <li>AST Comparison: {compareStats(playerStats.player.assists_per_game, avgStats.avg_assists_per_game)}</li>
-              <li>BLK Comparison: {compareStats(playerStats.player.blocks_per_game, avgStats.avg_avg_blocks_per_game)}</li>
-              
-            </ul>
-          </div>
-        )}
-
-        {/* Separate Container, Row, and Col for Over/Under Performance */}
-        <Container fluid className="d-flex align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
-          <Row>
-            <Col style={{ marginLeft: '5px' }}>
-              {/* Display Over/Under Performance here */}
-              {selectedPosition && Object.keys(avgStats).length > 0 && (
-                <div>
-                  <h2 className="h2">Performance Result</h2>
-                  <p>PPG: {performanceResult(playerStats.player.points_per_game, avgStats.avg_points_per_game)}</p>
-                  <p>MPG: {performanceResult(playerStats.player.minutes_per_game, avgStats.avg_minutes_per_game)}</p>
-                  <p>FG%: {performanceResult(playerStats.player.field_goal_percentage, avgStats.avg_field_goal_percentage)}</p>
-                  <p>3PT%: {performanceResult(playerStats.player.three_point_percentage, avgStats.avg_three_point_percentage)}</p>
-                  <p>REB: {performanceResult(playerStats.player.total_rebounds_per_game, avgStats.avg_total_rebounds_per_game)}</p>
-                  <p>AST: {performanceResult(playerStats.player.assists_per_game, avgStats.avg_assists_per_game)}</p>
-                  <p>BLK: {performanceResult(playerStats.player.blocks_per_game, avgStats.avg_avg_blocks_per_game)}</p>
-                  {/* Add more performance results for other stats as needed */}
-                </div>
-              )}
-            </Col>
-          </Row>
-        </Container>
+           <div>
+           <h2 className="h2">Average Stats for {selectedPosition}</h2>
+           <ul className="ul">
+             <li>Salary: {avgStats.avg_salary}</li>
+             <li>GP: {avgStats.avg_games_played}</li>
+             <li>GS: {avgStats.avg_games_started_per_game}</li>
+             <li>FGPG: {avgStats.avg_field_goals_per_game}</li>
+             <li>FGA: {avgStats.avg_field_goal_attempts_per_game}</li>
+             <li>MPG: {avgStats.avg_minutes_per_game}</li>
+             <li>FG%: {avgStats.avg_field_goal_percentage}</li>
+             <li>3PTFGA: {avgStats.avg_three_point_field_goals_per_game}</li>
+             <li>3PT%: {avgStats.avg_three_point_percentage}</li>
+             <li>FTA: {avgStats.avg_free_throw_attempts_per_game}</li>
+             <li>FTM: {avgStats.avg_free_throws_per_game}</li>
+             <li>OR: {avgStats.avg_offensive_rebounds_per_game}</li>
+             <li>DR: {avgStats.avg_defensive_rebounds_per_game}</li>
+             <li>REB: {avgStats.avg_total_rebounds_per_game}</li>
+             <li>AST: {avgStats.avg_assists_per_game}</li>
+             <li>AST: {avgStats.avg_assists_per_game}</li>
+             <li>STL: {avgStats.avg_steals_per_game}</li>
+             <li>BLK: {avgStats.avg_avg_blocks_per_game}</li>
+           </ul>
+         </div>
+       )}
       </Col>
     </Row>
   </Container>
-);
-              }
+  );
+}
 export default Stats;
   
+
+
+
+
+
+
+
+ 
+
+
+
+    
