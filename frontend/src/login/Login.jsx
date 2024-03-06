@@ -4,7 +4,7 @@ import AuthContext from '../context/AuthProvider';
 import "./Login.css";
 
 import axios from '../api/axios';
-const LOGIN_URL = 'https://nba-app-vzqb.onrender.com';
+const LOGIN_URL = 'https://overpaid-nba-d5zz.onrender.com';
 
 const Login = () => {
 	const navigate = useNavigate();
