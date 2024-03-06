@@ -6,12 +6,15 @@ let DB_URI;
 if (process.env.NODE_ENV === "test"){
     DB_URI = "overpaid_test";
 } else {
-    DB_URI = "overpaid";
+    DB_URI = "overpaid_hmkk";
 }
 
 let db = new Client({
-    host: "/var/run/postgresql",
-    database: DB_URI
+    host: "dpg-cnksjgicn0vc73d8n34g-a",
+    database: DB_URI,
+    port: 5432,
+    user: 'overpaid_hmkk_user',
+    password: '4BLpJtufqxhWE25oHdjbcizH5Ao46rNT',
 });
 
 db.connect();
