@@ -2,7 +2,7 @@ import requests
 import pdb
 from bs4 import BeautifulSoup as bs
 from flask import Flask
-from models import db, connect_db, PlayerStats, AvgStats
+from model import db, connect_db, PlayerStats, AvgStats
 from pprint import pprint
 
 app = Flask(__name__)
