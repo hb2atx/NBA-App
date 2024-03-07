@@ -10,11 +10,7 @@ if (process.env.NODE_ENV === "test"){
 }
 
 let db = new Client({
-    host: "dpg-cnksjgicn0vc73d8n34g-a",
-    database: DB_URI,
-    port: 5432,
-    user: 'overpaid_hmkk_user',
-    password: '4BLpJtufqxhWE25oHdjbcizH5Ao46rNT',
+    connectionString: "postgres://isexgqdv:TWgtQeXjJiecaYkYUMNraT8Nm0SlUXuh@bubble.db.elephantsql.com/isexgqdv"
 });
 
 db.connect();
