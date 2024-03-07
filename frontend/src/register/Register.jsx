@@ -74,6 +74,7 @@ const Register = () => {
 			return;
 		}
 		try {
+			console.log('Request Payload:', { username: user, password: pwd, email: email, confirmPassword: matchPwd });
 			const response = await axios.post(
 				REGISTER_URL,
                 { username: user, password: pwd, email: email, confirmPassword: matchPwd },
