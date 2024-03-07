@@ -7,25 +7,25 @@ import "./Stats.css";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function compareStats(playerStat, avgStat) {
-  if (playerStat > avgStat) {
-    return 'Above Average';
-  } else if (playerStat < avgStat) {
-    return 'Below Average';
-  } else {
-    return 'Equal to Average';
-  }
-}
+// function compareStats(playerStat, avgStat) {
+//   if (playerStat > avgStat) {
+//     return 'Above Average';
+//   } else if (playerStat < avgStat) {
+//     return 'Below Average';
+//   } else {
+//     return 'Equal to Average';
+//   }
+// }
 
-function performanceResult(playerStat, avgStat) {
-  if (playerStat > avgStat) {
-    return 'Player has Overperformed';
-  } else if (playerStat < avgStat) {
-    return 'Player has Underperformed';
-  } else {
-    return 'Player performance is Equal';
-  }
-}
+// function performanceResult(playerStat, avgStat) {
+//   if (playerStat > avgStat) {
+//     return 'Player has Overperformed';
+//   } else if (playerStat < avgStat) {
+//     return 'Player has Underperformed';
+//   } else {
+//     return 'Player performance is Equal';
+//   }
+// }
 
 function Stats() {
   const [playerName, setPlayerName] = useState('');

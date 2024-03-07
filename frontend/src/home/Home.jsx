@@ -1,8 +1,19 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import "./Home.css";
 
 function Home() {
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+
+  const handleLoginClick = () => {
+    navigate('/auth'); // Use navigate to go to the /auth route
+  };
+
+  const handleRegisterClick = () => {
+    navigate('/auth/register'); // Use navigate to go to the /auth/register route
+  };
+
   return (
     <Container fluid className="d-flex align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
       <Row>
@@ -10,8 +21,8 @@ function Home() {
           <h1 className="h1-title" style={{ color: '#FB8122'}}>Welcome to OverPaid</h1>
           <p>Some simple web app info</p>
           <div className="button-container"> 
-          <Button href="/auth" variant="contained" size="lg" className="mr-3">Login</Button>
-          <Button href="/auth/register" variant="outline-'#FB8122'" size="lg">Register</Button>
+          <Button onClick={handleLoginClick} variant="contained" size="lg" className="mr-3">Login</Button>
+          <Button onClick={handleRegisterClick} variant="outline-'#FB8122'" size="lg">Register</Button>
           </div>
         </Col>
       </Row>
