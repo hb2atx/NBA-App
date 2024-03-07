@@ -24,14 +24,8 @@ const register = async (req, res) => {
     const insertUser ='INSERT INTO users (username, email, password, active) VALUES ($1, $2, $3, true) RETURNING *';
     const insertResult = await db.query(insertUser, [username, email, hashedPassword]);
     const newUser = insertResult.rows[0];
-    const accessToken = jwt.sign(
-      {
-        UserInfo: {
-          username: newUser.username,
-          email: newUser.email
-        },
-        
-      },
+    const accessToken = jwt.sign({UserInfo: {username: newUser.username,email: newUser.email},
+    },
       process.env.ACCESS_TOKEN_SECRET,
       { expiresIn: '15m' }
     );
