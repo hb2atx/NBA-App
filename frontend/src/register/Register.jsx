@@ -86,12 +86,13 @@ const Register = () => {
 			);
 			
 			console.log(JSON.stringify(response?.data));
-			setSuccess(true);
-			navigate('/auth');
+			
 			setUser('');
             setEmail('');
 			setPwd('');
 			setMatchPwd('');
+			setSuccess(true);
+			navigate('/auth');
 		} catch (err) {
             console.error(err); 
 			if (!err?.response) {
@@ -230,7 +231,7 @@ const Register = () => {
 							<span aria-label="percent">%</span>
 						</p>
 
-						<label htmlFor="matchPwd">
+						<label htmlFor="confirmPassword">
 							Confirm Password:
 							<FontAwesomeIcon
 								icon={faCheck}
@@ -242,8 +243,8 @@ const Register = () => {
 							/>
 						</label>
 						<input
-							type="matchPwd"
-							id="matchPwd"
+							type="confirmPassword"
+							id="confirmPassword"
 							onChange={(e) => setMatchPwd(e.target.value)}
 							value={matchPwd}
 							required
