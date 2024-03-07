@@ -72,7 +72,7 @@ function Stats() {
 
     try {
       const response = await axios.get(`https://overpaid-nba-d5zz.onrender.com/avg/${position}`);
-      console.log('Average Stats for', position, ':', response.data);
+      console.log('Response Data:', response.data);
       setAvgStats(response.data[0]);
     } catch (error) {
       console.error(`Error fetching average stats for ${position}:`, error);
