@@ -17,9 +17,7 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const REGISTER_URL = 'https://overpaid-nba-d5zz.onrender.com/auth/register';
 
 const Register = () => {
-
     const navigate = useNavigate();
-
 	const userRef = useRef();
     const emailRef = useRef(); 
 	const errRef = useRef();
@@ -74,19 +72,14 @@ const Register = () => {
 			return;
 		}
 		try {
-			console.log('Request Payload:', { username: user, password: pwd, email: email, confirmPassword: matchPwd });
 			const response = await axios.post(
 				REGISTER_URL,
                 JSON.stringify({ username: user, password: pwd, email: email, confirmPassword: matchPwd }),
-            
 				{
 					headers: { 'Content-Type': 'application/json' },
 					withCredentials: true,
 				}
 			);
-			
-			console.log(JSON.stringify(response?.data));
-			
 			setUser('');
             setEmail('');
 			setPwd('');
@@ -94,7 +87,6 @@ const Register = () => {
 			setSuccess(true);
 			navigate('/auth');
 		} catch (err) {
-            console.error(err); 
 			if (!err?.response) {
 				setErrMsg('No Server Response');
 			} else if (err.response?.status === 409) {
