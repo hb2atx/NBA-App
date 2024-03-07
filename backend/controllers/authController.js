@@ -9,6 +9,9 @@ require('dotenv').config();
 
 const register = async (req, res) => {
 
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Origin', 'https://nba-app-vzqb.onrender.com');
+  
   console.log('Received registration request:', req.body);
 
   const { username, email, password, confirmPassword } = req.body;

@@ -19,6 +19,7 @@ app.use(logger)
 
 app.use(express.json())
 app.use(cookieParser())
+app.use(cors({ origin: 'https://nba-app-vzqb.onrender.com', credentials: true }));
 
 // routes
 app.use('/auth', require('./routes/authRoutes'))
