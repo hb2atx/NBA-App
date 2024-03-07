@@ -1,11 +1,11 @@
 require('dotenv').config()
-require('express-async-errors')
+// require('express-async-errors')
 
 // dependencies
 const express = require('express');
 const app = express();
 const path = require('path'); 
-const { logger, logEvents } = require('./middleware/logger')
+const { logger } = require('./middleware/logger')
 const errorHandler = require('./middleware/errorHandler')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
@@ -19,7 +19,7 @@ app.use(logger)
 
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({ origin: 'https://nba-app-vzqb.onrender.com', credentials: true }));
+
 
 // routes
 app.use('/auth', require('./routes/authRoutes'))

@@ -230,7 +230,7 @@ const Register = () => {
 							<span aria-label="percent">%</span>
 						</p>
 
-						<label htmlFor="confirm_pwd">
+						<label htmlFor="matchPwd">
 							Confirm Password:
 							<FontAwesomeIcon
 								icon={faCheck}
@@ -242,8 +242,8 @@ const Register = () => {
 							/>
 						</label>
 						<input
-							type="password"
-							id="confirm_pwd"
+							type="matchPwd"
+							id="matchPwd"
 							onChange={(e) => setMatchPwd(e.target.value)}
 							value={matchPwd}
 							required

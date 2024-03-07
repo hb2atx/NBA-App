@@ -1,7 +1,8 @@
+require('dotenv').config();
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken');
 const db = require('../db')
-require('dotenv').config();
+
 
 // @desc Register
 // POST /register
@@ -9,9 +10,6 @@ require('dotenv').config();
 
 const register = async (req, res) => {
 
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
-  res.setHeader('Access-Control-Allow-Origin', 'https://nba-app-vzqb.onrender.com');
-  
   console.log('Received registration request:', req.body);
 
   const { username, email, password, confirmPassword } = req.body;
