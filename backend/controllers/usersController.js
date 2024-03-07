@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt')
+import bcrypt from 'bcrypt';
 const db = require('../db')
 
 const getAllUsers = async (req, res) => {
