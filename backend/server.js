@@ -26,6 +26,9 @@ app.use('/users', require('./routes/userRoutes'))
 app.use('/player', require('./routes/playerRoutes'))
 app.use('/avg', require('./routes/avgRoutes'))
 
+// css, images, html files
+app.use('/', express.static(path.join(__dirname, 'public')))
+
 app.use(errorHandler)
 
 

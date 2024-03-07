@@ -14,7 +14,7 @@ const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const REGISTER_URL = 'https://nba-app-vzqb.onrender.com/auth/register';
+const REGISTER_URL = 'https://overpaid-nba-d5zz.onrender.com/auth/register';
 
 const Register = () => {
 

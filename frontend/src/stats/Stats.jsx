@@ -47,7 +47,7 @@ function Stats() {
     setLoading(true);
     try {
       const encodedPlayerName = encodeURIComponent(playerName);
-      const response = await axios.get(`http://localhost:3500/player/${encodedPlayerName}`);
+      const response = await axios.get(`https://nba-app-vzqb.onrender.com/player/${encodedPlayerName}`);
 
       console.log('Response Data:', response.data); 
       setPlayerStats(response.data);
@@ -71,7 +71,7 @@ function Stats() {
     setSelectedPosition(position);
 
     try {
-      const response = await axios.get(`http://localhost:3500/avg/${position}`);
+      const response = await axios.get(`https://nba-app-vzqb.onrender.com/avg/${position}`);
       console.log('Average Stats for', position, ':', response.data);
       setAvgStats(response.data[0]);
     } catch (error) {
