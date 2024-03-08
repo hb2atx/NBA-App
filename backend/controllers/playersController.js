@@ -22,7 +22,8 @@ const getAllPlayers = async(req, res, next) => {
 const getSpecificPlayer = async(req, res, next) => {
 
     const playerName = decodeURIComponent(req.params.name.replace(/\+/g, ' '));
-
+    console.log("playerName is: ", playerName) 
+    console.log(req.params.name)
     try {
         const playerStats = await db.query(
             `SELECT * FROM players_stats WHERE players_name = $1`,
